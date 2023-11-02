@@ -91,19 +91,47 @@ class MainApp extends StatelessWidget {
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),
-                  child: Text("Forgot Password"),
+                  child: Text("Forgot Password ?"),
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 1,
                 color: Colors.black,
               ),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 40),
+                  minimumSize: Size(double.infinity, 45),
                 ),
-                child: Text("Login dengan Facebook"),
+                child: Stack(
+                  alignment: Alignment.centerLeft,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Login dengan Facebook"),
+                      ],
+                    ),
+                    Positioned(
+                      left: 0,
+                      child: Icon(
+                        Icons.facebook,
+                        color: const Color.fromARGB(255, 0, 106, 193),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 250),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an Account?"),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Register"),
+                  ),
+                ],
               ),
             ],
           ),
