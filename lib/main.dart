@@ -14,7 +14,8 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             leading: Icon(Icons.menu),
-            title: Text("Beranda"),
+            title: Text("Pencarian"),
+            backgroundColor: Colors.orange,
           ),
           body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 70),
@@ -23,108 +24,39 @@ class MainApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 50),
+                    margin: EdgeInsets.only(top: 30),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        'assets/logo.png',
-                        width: 100, // Lebar gambar
-                        height: 100, // Tinggi gambar
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Text(
+                          "Jambi",
+                          style: TextStyle(fontSize: 18),
+                        ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(
-                            left:
-                                40), // Jarak horizontal antara gambar pertama dan kedua
-                      ),
-                      Image.asset(
-                        'assets/logo.png',
-                        width: 100, // Lebar gambar
-                        height: 100, // Tinggi gambar
-                      ),
+                      Icon(Icons.all_inclusive_sharp),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Indonesia",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      )
                     ],
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          top: 10), // Tambahkan margin top di sini
-                      child: Text(
-                        "Judul aplikasi",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Masukkan kata",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(50),
+                            right: Radius.circular(50)),
                       ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 18),
                     ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          top: 10), // Tambahkan margin top di sini
-                      child: Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis odio eget varius. Proin varius fringilla odio, vel vulputate ex. Suspendisse ac luctus libero. Fusce nec leo nec eros tincidunt lacinia. Curabitur ullamcorper nunc sit amet tellus vehicula, a pellentesque neque malesuada. Nunc viverra, ligula at bibendum vestibulum, orci urna fermentum est, a vulputate erat arcu id justo. Nullam bibendum, sapien a efficitur aliquam, justo mi posuere ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          top: 10), // Tambahkan margin top di sini
-                      child: Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis odio eget varius. Proin varius fringilla odio, vel vulputate ex. Suspendisse ac luctus libero. Fusce nec leo nec eros tincidunt lacinia. ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          top: 10), // Tambahkan margin top di sini
-                      child: Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          top: 10), // Tambahkan margin top di sini
-                      child: Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 10),
-                    alignment: Alignment.centerLeft,
-                    color: Color.fromARGB(255, 233, 209, 137),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Sed ut tellus justo. Morbi varius justo non elit iaculis, et cursus dui iaculis. Vestibulum bibendum fringilla neque, ac condimentum libero. Suspendisse luctus, odio eget fermentum malesuada, lorem nunc blandit urna, ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 10),
-                    alignment: Alignment.centerLeft,
-                    color: Color.fromARGB(255, 233, 209, 137),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Sed ut tellus justo. Morbi varius justo non elit iaculis, et cursus dui iaculis. Vestibulum bibendum fringilla neque, ac condimentum libero. Suspendisse luctus, odio eget fermentum malesuada, lorem nunc blandit urna, ",
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),
